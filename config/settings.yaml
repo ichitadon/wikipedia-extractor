@@ -1,0 +1,4 @@
+input_dir_path: "/app/data/input/"
+output_dir_path: "/app/data/output/"
+content_file_name: "jawiki-20200106-cirrussearch-content.json.gz"
+general_file_name: "jawiki-20200106-cirrussearch-general.json.gz"
