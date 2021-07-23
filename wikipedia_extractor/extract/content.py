@@ -37,8 +37,6 @@ class Content:
                 else:
                     extracted[1].insert(0, tmp_doc_id)
                     result.append(extracted[1])
-                if i == 20:
-                    break
                 if i % 200000 == 0:
                     print(int(i / 2))
         self.extract_result = result

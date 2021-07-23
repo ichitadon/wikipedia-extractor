@@ -43,8 +43,6 @@ class General:
                     result.append(extracted[1])
                 else:
                     continue
-                if i == 2000:
-                    break
                 if i % 200000 == 0:
                     print(int(i / 2))
         self.extract_result = result
