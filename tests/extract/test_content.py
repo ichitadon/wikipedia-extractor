@@ -21,7 +21,7 @@ class TestContent:
             "wiki": "jawiki",
             "auxiliary_text": ["hoge"],
             "language": "ja",
-            "title": "hoge",
+            "title": "title",
             "text": "hoge",
             "defaultsort": "hoge",
             "timestamp": "2019-11-11T11:29:10Z",
@@ -50,7 +50,7 @@ class TestContent:
         actual = Content.extract_from_json_line(self, json.dumps(testee))
         assert actual[0] == "content"
         assert actual[1] == [
-            "hoge",
+            "title",
             ["redirect1", "redirect2", "redirect3"],
             ["category1", "category2", "category3"],
         ]
