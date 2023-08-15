@@ -10,7 +10,7 @@ from wikipedia_extractor.util.color import Color
 
 class General:
     RESULT_COLUMNS = ["doc_id", "title", "redirects", "categories"]
-    extract_result = Type[List[Any]]
+    extract_result: List[Any]
 
     def __init__(self):
         pass
@@ -29,7 +29,7 @@ class General:
             else:
                 return ("none", None)
 
-    def extract(self, path: str):
+    def extract(self, path: str) -> None:
         i = 0
         result = []
         tmp_doc_id = 0
@@ -47,7 +47,7 @@ class General:
                     print(int(i / 2))
         self.extract_result = result
 
-    def to_csv(self, path: str):
+    def to_csv(self, path: str) -> None:
         df_result = pd.DataFrame(self.extract_result, columns=self.RESULT_COLUMNS)
         df_result.to_csv(path, index=False)
 

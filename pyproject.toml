@@ -5,18 +5,18 @@ description = ""
 authors = ["Kazutaka Ohashi <ichitadon@xenodata-lab.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
-wikitextparser = "^0.47.5"
-numpy = "^1.21.1"
-pandas = "^1.3.0"
-autoflake = "^1.4"
-PyYAML = "^5.4.1"
+python = "^3.11"
+wikitextparser = "^0.53.0"
+numpy = "^1.25.2"
+pandas = "^2.0.1"
+PyYAML = "^6.0.1"
 
 [tool.poetry.dev-dependencies]
 black = { version = "*", allow-prereleases = true }
 isort = "*"
 mypy = "*"
-pytest = "^5.2"
+autoflake = "^2.2"
+pytest = "^7.4"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

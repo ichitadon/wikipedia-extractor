@@ -1,4 +1,4 @@
-FROM python:3.8.11-slim-buster
+FROM python:3.11.4-slim-buster
 
 # install dependent packages
 RUN apt-get -y update && apt-get install -y --no-install-recommends \
@@ -9,8 +9,8 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
 
 WORKDIR /home
 ENV HOME /home
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-ENV PATH $PATH:/home/.poetry/bin
+RUN curl -sSL https://install.python-poetry.org | python
+ENV PATH $PATH:/home/.local/bin
 RUN poetry config virtualenvs.create false
 
 WORKDIR /app
